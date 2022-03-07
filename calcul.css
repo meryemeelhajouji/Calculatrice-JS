@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+ background-color: pink;
+ background-repeat: no-repeat;
+ background-size: cover;
+ height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.calcul{
+    background-color:  #352a42;;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+   color: #E25EAB ;
+   padding-top: 10px;
+  
+}
+
+
+.calcul h3{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.ecran{
+   /* background-color: rgb(198, 237, 255);*/
+   background-color: #352a42;
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+   border-bottom: #E25EAB 2px solid;
+   
+}
+#output{
+    background-color: #352a42;
+    width: 85%;
+    height: 180px;
+    color: #fff;
+    padding: 15px;
+      font-size: 25px;
+    margin-left: 30px;
+}
+
+.touches{
+     display: grid;
+     grid-template-columns: repeat(4,100px);
+     grid-template-rows: repeat(5,80px);
+    
+   
+}
+.touches :hover{
+background-color: #E25EAB;
+} 
+.bouton{
+    background-color: #352a42;
+    color:#fff;
+    font-size: 25px;
+    font-weight: bold;
+    border:none;
+    outline:none;
+    border-radius: 15px;
+    
+}
+#supp{
+    color: rgb(252, 56, 56);
+    grid-column: span 2;
+}
+#entre{
+    color: rgb(92, 240, 92);
+    grid-column: span 2;
+}

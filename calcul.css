@@ -16,7 +16,7 @@ body{
 
 
 .calcul{
-    background-color:  #352a42;;
+    background-color:  #352a42;
     display: flex;
     flex-direction: column;
     border-radius: 15px;
@@ -35,20 +35,15 @@ body{
    /* background-color: rgb(198, 237, 255);*/
    background-color: #352a42;
     width: 100%;
-    height: 200px;
+    height: 250px;
     border-radius: 15px;
    border-bottom: #E25EAB 2px solid;
+   color: #fff;
+   padding: 15px;
+     font-size: 25px;
    
 }
-#output{
-    background-color: #352a42;
-    width: 85%;
-    height: 180px;
-    color: #fff;
-    padding: 15px;
-      font-size: 25px;
-    margin-left: 30px;
-}
+
 
 .touches{
      display: grid;
@@ -70,11 +65,11 @@ background-color: #E25EAB;
     border-radius: 15px;
     
 }
-#supp{
-    color: rgb(252, 56, 56);
+.supp{
+   
     grid-column: span 2;
 }
-#entre{
-    color: rgb(92, 240, 92);
+.entre{
+    
     grid-column: span 2;
 }

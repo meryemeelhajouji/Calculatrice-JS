@@ -41,25 +41,33 @@ function diivision(first_number,last_number){
 
 
 
-let nomber1 = "0"
+let nomber1 = ""
 let nomber2 = ""
 let operater =""
+
 
 
 
 let ecran = document.querySelector('#scran')
 
 let les_number = document.querySelectorAll('.number')
+
 les_number.forEach((number) => {
    number.addEventListener('click' , () =>{
-       if(operater===""){
-           nomber1 = number.innerHTML
-           ecran.innerHTML += nomber1 
+       if(operater==""){
+        if (nomber1 =="0"){
+            nomber1 = number.innerHTML
+        }else{
+             nomber1 += number.innerHTML
+        }
+          
+         
        }else{
-           nomber2 = number.innerHTML
-           ecran.innerHTML += nomber2
+           nomber2 += number.innerHTML
+          
 
        }
+       ecran.innerHTML = `${nomber1} ${operater} ${nomber2}`
    })
 
 })
@@ -67,14 +75,16 @@ les_number.forEach((number) => {
 let operation = document.querySelectorAll('.operation')
 operation.forEach((operation) => {
     operation.addEventListener('click' , () =>{
-        if(nomber2===""){
+        if(nomber2==""){
             operater = operation.innerHTML
-          
+            
         
         }else{
-            nomber1 =operate(Number(nomber1),operater,Number(nomber2)) 
-            
+           
+            nomber1 = operate(Number(nomber1),operater,Number(nomber2)) 
+            operater = operation.innerHTML
             nomber2=""
+            
            
         }
         ecran.innerHTML = `${nomber1} ${operater} ${nomber2}`
@@ -87,13 +97,26 @@ egale.addEventListener('click' , () => {
     ecran.innerHTML = operate(Number(nomber1),operater,Number(nomber2)) 
 } )
 
+
+
 let effacer = document.querySelector('#effacer')
 
 effacer.addEventListener('click' , () => {
   
-    nomber1 = ""
+    nomber1 = "0"
     nomber2 = ""
     operater = ""
+    ecran.innerHTML = `${nomber1} ${operater} ${nomber2}`
+})
+
+let vergule = document.querySelector('#vergule')
+vergule.addEventListener('click' , () => {
+
+    if(operater ==""){
+        nomber1 += "."
+    }else{
+        nomber2 += "."
+    }
     ecran.innerHTML = `${nomber1} ${operater} ${nomber2}`
 })
 

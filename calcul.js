@@ -14,9 +14,13 @@ function multiplication(first_number,last_number){
  
 }
 function diivision(first_number,last_number){
-
+if (last_number =="0"){
+   alert('Désolé... Nous ne pouvons pas diviser par zéro')
+}else{
     return first_number /  last_number ;
  
+}
+    
 }
 
   let operate =  function (first_number,operateur,last_number)  {
@@ -67,6 +71,7 @@ les_number.forEach((number) => {
           
 
        }
+       
        ecran.innerHTML = `${nomber1} ${operater} ${nomber2}`
    })
 
@@ -111,11 +116,16 @@ effacer.addEventListener('click' , () => {
 
 let vergule = document.querySelector('#vergule')
 vergule.addEventListener('click' , () => {
-
+  
     if(operater ==""){
-        nomber1 += "."
+        if(!nomber1.includes(".")){
+              nomber1 += "."
+        }
+      
     }else{
-        nomber2 += "."
+        if(!nomber2.includes(".")){
+            nomber2 += "."
+      }
     }
     ecran.innerHTML = `${nomber1} ${operater} ${nomber2}`
 })
